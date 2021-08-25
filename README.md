@@ -1,6 +1,16 @@
 golang-quiz-cli
 ===============
 
+IN PROGRESS.
+
+Todo: see how to offer different options after command is run. 
+
+like 
+
+-> goquiz begin
+-> quiz on slices
+-> quiz on maps
+
 A quiz game to help sharpen your basic golang knowledge. 
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
