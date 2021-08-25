@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "author": "Lucia Cerchie @Cerchie",
   "bin": {
-    "golang-quiz-cli": "./bin/run"
+    "goquiz": "./bin/run"
   },
   "bugs": "https://github.com/Cerchie/golang-quiz-cli/issues",
   "dependencies": {
