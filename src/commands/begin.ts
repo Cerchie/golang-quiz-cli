@@ -25,11 +25,8 @@ export default class Begin extends Command {
       const answer3 = await cli.prompt(
         "In Golang, everything is passed by value. What does this mean for assigning the value of an array to another variable?"
       );
-      const data = {
-        data: { 1: answer1, 2: answer2, 3: answer3 },
-      };
+      const data = [answer1, answer2, answer3];
       cli.table(data, answer);
-      //typeerror: this.data.map is not a function
     }
   }
 }
