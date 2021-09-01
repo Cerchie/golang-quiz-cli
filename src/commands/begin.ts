@@ -44,8 +44,24 @@ export default class Begin extends Command {
       const answer3 = await cli.prompt(
         'In Golang, everything is passed by value. What does this mean for assigning the value of an array to another variable?'
       )
-      const data = [answer1, answer2, answer3]
-      cli.table(data)
+      const data = [
+        {your_answer: answer1},
+        {your_answer: answer2},
+        {your_answer: answer3},
+        {correct_answer: 'no'},
+        {correct_answer: 'no'},
+        {correct_answer: 'placeholder'},
+      ]
+
+      cli.log('DATA HERE', data)
+      cli.table(data, {
+        your_answer: {
+          minWidth: 2,
+        },
+        correct_answer: {
+          minWidth: 2,
+        },
+      })
 
       // output:
 
