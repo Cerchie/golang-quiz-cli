@@ -45,21 +45,17 @@ export default class Begin extends Command {
         'In Golang, everything is passed by value. What does this mean for assigning the value of an array to another variable?'
       )
       const data = [
-        {your_answer: answer1},
-        {your_answer: answer2},
-        {your_answer: answer3},
-        {correct_answer: 'no'},
-        {correct_answer: 'no'},
-        {correct_answer: 'placeholder'},
+        {your_answer: answer1, correct_answer: 'no'},
+        {your_answer: answer2, correct_answer: 'no'},
+        {your_answer: answer3, correct_answer: 'placeholder'},
       ]
 
-      cli.log('DATA HERE', data)
       cli.table(data, {
         your_answer: {
           minWidth: 2,
         },
         correct_answer: {
-          minWidth: 2,
+          minWidth: 1,
         },
       })
 
