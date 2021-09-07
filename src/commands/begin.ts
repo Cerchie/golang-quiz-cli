@@ -58,14 +58,9 @@ export default class Begin extends Command {
           minWidth: 1,
         },
       })
-
-      // output:
-
-      // 0 1 2         3         4         5
-      // ─ ─ ───────── ───────── ───────── ─────────
-      // n o undefined undefined undefined undefined
-      // n o undefined undefined undefined undefined
-      // a s f         a         f         g
+      cli.log(
+        'Answers sourced from https://www.sohamkamani.com/golang/arrays-vs-slices/'
+      )
     }
   }
 }
