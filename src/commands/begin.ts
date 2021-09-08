@@ -45,9 +45,12 @@ export default class Begin extends Command {
         'In Golang, everything is passed by value. What does this mean for assigning the value of an array to another variable?'
       )
       const data = [
-        {your_answer: answer1, correct_answer: 'no'},
-        {your_answer: answer2, correct_answer: 'no'},
-        {your_answer: answer3, correct_answer: 'placeholder'},
+        {your_answer: answer1, correct_answer: 'No.'},
+        {your_answer: answer2, correct_answer: 'No.'},
+        {
+          your_answer: answer3,
+          correct_answer: 'This means the entire value will get copied.',
+        },
       ]
 
       cli.table(data, {
@@ -59,9 +62,48 @@ export default class Begin extends Command {
         },
       })
       cli.log(
-        'Answers sourced from https://www.sohamkamani.com/golang/arrays-vs-slices/'
+        'Questions and answers sourced from https://www.sohamkamani.com/golang/arrays-vs-slices/'
       )
+      this.exit()
+    }
+
+    if (stage === 'maps') {
+      const answer1 = await cli.prompt(
+        'Do maps consume more or less memory than arrays'
+      )
+      const answer2 = await cli.prompt(
+        'What happens if a map is assigned to another map?'
+      )
+      const answer3 = await cli.prompt(
+        'What is the name of a common built-in function that creates a map?'
+      )
+      const data = [
+        {
+          your_answer: answer1,
+          correct_answer: 'Maps consume less memory than arrays.',
+        },
+        {
+          your_answer: answer2,
+          correct_answer: 'They will share all underlying elements.',
+        },
+        {
+          your_answer: answer3,
+          correct_answer: 'make(M)',
+        },
+      ]
+
+      cli.table(data, {
+        your_answer: {
+          minWidth: 2,
+        },
+        correct_answer: {
+          minWidth: 1,
+        },
+      })
+      cli.log(
+        'Questions and answers sourced from https://go101.org/article/container.html'
+      )
+      this.exit()
     }
   }
 }
-// https://www.sohamkamani.com/golang/arrays-vs-slices/ <- questions source
